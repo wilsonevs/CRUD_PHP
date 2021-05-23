@@ -75,9 +75,12 @@ $usuarios = $resultado->fetchAll(PDO::FETCH_ASSOC);
                     <input type="submit" class="btn btn-dark btn-block" name="guardar_project" value="Insertar">
                 </div>
             </div>
+            <div class="row justify-content-center">
+            <div class="col-lg-12">
+            <div class="table-responsive">
             <div class="card-footer">
-                <table class="table table-striped table-hover table-bordered" style="width:100%">
-                    <thead>
+                <table id="verTableUsuario" class="table table-striped table-hover table-bordered" style="width:100%">
+                    <thead class="text-center thead-dark">
                         <tr>
                             <th>Codigo proyecto</th>
                             <th>Nombre</th>
@@ -85,6 +88,7 @@ $usuarios = $resultado->fetchAll(PDO::FETCH_ASSOC);
                             <th>Constructora</th>
                             <th>Contacto</th>
                             <th>Fecha de Ingreso</th>
+                            <th>Accioness</th>
                         </tr>
                     </thead>
                     <tbody class="">
@@ -109,7 +113,9 @@ $usuarios = $resultado->fetchAll(PDO::FETCH_ASSOC);
                     </tbody>
                 </table>
             </div>
-
+            </div>
+            </div>
+            </div>
         </form>
     </div>
 </div>
