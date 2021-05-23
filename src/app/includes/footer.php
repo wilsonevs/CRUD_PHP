@@ -13,8 +13,6 @@
 <script src="/Prueba_colombiano/src/app/js/formulario_usuario.js"></script>
 <script src="/Prueba_colombiano/src/app/js/project.js"></script>
 
-<!--SweetAlert2-->
-<script src="/Prueba_colombiano/librerias/sweetalert2/dist/sweetalert2.all.min.js "></script>
 
 </body>
 

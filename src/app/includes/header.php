@@ -26,8 +26,6 @@
     <link rel="stylesheet" href="/Prueba_colombiano/librerias/datatable/datatables.min.css">
     <link rel="stylesheet" href="/Prueba_colombiano/librerias/datatable/DataTables-1.10.24/css/dataTables.bootstrap.min.css">
 
-    <!-- SweetAlert 2 -->
-    <link rel="stylesheet" href="/Prueba_colombiano/librerias/sweetalert2/dist/sweetalert2.min.css">
 
 </head>
 
