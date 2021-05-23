@@ -5,7 +5,6 @@
 
 
     <!-- ##### Login Area Start ##### -->
-    <form method="POST" action="tabla.php" class="section-padding-100 " id="registro">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-8">
@@ -14,33 +13,38 @@
                         <h3>El Colombiano</h3>
                         <!-- Login Form -->
                         <div class="login-form">
-                            <form action="#" method="post">
+                            <form action="src/app/models/save_user.php" method="POST">
                                 <div class="form-group">
-                                    <label for="userNew" id="userRegistro">Nombre Completo</label>
-                                    <input type="text" class="form-control" id="userNew" aria-describedby="emailHelp" placeholder="Ingresar Nombre Completo">
+                                    <label for="nombre" >Nombre Completo</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="emailHelp" placeholder="Ingresar Nombre Completo" min="6" max="" required>
+                                    <?php if(isset($_GET['nombre_vacio']) && $_GET['nombre_vacio']): ?><span style="color: red;">Completa este campo.</span><?php endif; ?>
                                 </div>
                                 <div class="form-group">
-                                    <label for="addressNew" id="directionRegistro">Dirreción</label>
-                                    <input type="text" class="form-control" id="addressNew" aria-describedby="emailHelp" placeholder="Ingresar Dirreción">
+                                    <label for="telefono" id="directionRegistro">Teléfono</label>
+                                    <input type="number" class="form-control" id="telefono" name="telefono" aria-describedby="emailHelp" placeholder="Ingresar Teléfono" min="6" max="" required>
+                                    <?php if(isset($_GET['telefono_vacio']) && $_GET['telefono_vacio']): ?><span style="color: red;">Completa este campo.</span><?php endif; ?>
                                 </div>
                                 <div class="form-group">
-                                    <label for="buildersNew" id="telephoneRegistro">Constructora</label>
-                                    <input type="text" class="form-control" id="buildersNew" aria-describedby="emailHelp" placeholder="Nombre Constructora">
+                                    <label for="email" >Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Ingresar Correo eletronico"  required>
+                                    <?php if(isset($_GET['email_vacio']) && $_GET['email_vacio']): ?><span style="color: red;">Completa este campo.</span><?php endif; ?>
                                 </div>
                                 <div class="form-group">
-                                    <label for="contactNew" id="emailRegistro">Contacto</label>
-                                    <input type="text" class="form-control" id="contactNew" aria-describedby="emailHelp" placeholder="Ingresar Contacto" maxlength="10">
+                                    <label for="codigo" >Codigo del proyecto</label>
+                                    <input type="text" class="form-control" id="codigo" name="codigo" aria-describedby="emailHelp" placeholder="Codigo del proyecto" min="4" max="6" required>
+                                    <?php if(isset($_GET['codigo_vacio']) && $_GET['codigo_vacio']): ?><span style="color: red;">Completa este campo.</span><?php endif; ?>
                                 </div>
-                                <button type="submit" class="btn formulario-btn mt-30" id="buttonRegistro" onclick="registro()">Guardar</button>
+                                
+                                <button type="submit" class="btn formulario-btn mt-30" id="enviar" name="enviar">Enviar</button>
                             </form>
                             <br>
-                            <p>Constructora <a href="index.html"><Strong>Buscar</Strong></a></p>
+                            <p>Buscar más <a href="/Prueba_colombiano/index.php"><Strong>Proyectos</Strong></a></p>
 
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </form>
+
 
 <?php include("src/app/includes/footer.php")?>

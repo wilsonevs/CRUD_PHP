@@ -1,7 +1,7 @@
 
 // Funcion
 $(document).ready(function() {
-    $('#verTable').DataTable();
+    $('#verTableUsuario').DataTable();
 } );
 
 function registro() {

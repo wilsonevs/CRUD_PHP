@@ -1,12 +1,12 @@
 CREATE DATABASE constructoras;
-USE constructoras;
+use constructoras;
 
 CREATE TABLE users(
     id_users INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(75) not null,
     telefono VARCHAR(255) not null,
     email VARCHAR(75) not null,
-    codigo int not null,
+    codigo VARCHAR(10) not null,
     data_create timestamp default current_timestamp
 );
 
